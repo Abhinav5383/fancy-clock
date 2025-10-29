@@ -1,0 +1,25 @@
+{
+    "$schema": "https://biomejs.dev/schemas/2.2.5/schema.json",
+    "files": {
+        "includes": ["**/*.{tsx,ts,json,css,cjs}", "!**/node_modules/*", "!**/dist/*", "!**/build/*", "!**/public/*"]
+    },
+    "linter": {
+        "enabled": true,
+        "rules": {
+            "nursery": {
+                "useSortedClasses": {
+                    "level": "info",
+                    "options": {
+                        "attributes": ["classList"],
+                        "functions": ["cn", "cva", "tw", "tw.*"]
+                    }
+                }
+            }
+        }
+    },
+    "formatter": {
+        "lineWidth": 130,
+        "indentWidth": 4,
+        "indentStyle": "space"
+    }
+}
