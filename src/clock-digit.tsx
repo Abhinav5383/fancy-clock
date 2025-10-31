@@ -1,4 +1,3 @@
-import { useEffect, useId, useRef, useState } from "react";
 import { type Digit, getDigitConfig } from "./digits";
 
 interface ClockDigitProps {
