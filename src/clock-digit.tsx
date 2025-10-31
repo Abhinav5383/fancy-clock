@@ -1,14 +1,15 @@
+import { useEffect, useId, useRef, useState } from "react";
 import { type Digit, getDigitConfig } from "./digits";
 
 interface ClockDigitProps {
-    digit: string;
+    digit: string | undefined;
 }
 
 export function ClockDigit(props: ClockDigitProps) {
     const digitCells = getDigitConfig(props.digit as Digit);
     return (
         <div className="cells-grid">
-            {digitCells.map((row, i) => {
+            {digitCells.map((row) => {
                 return row.map((cell, i) => <DigitCell key={i} rotation={cell} />);
             })}
         </div>

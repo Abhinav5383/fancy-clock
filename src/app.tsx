@@ -3,7 +3,7 @@ import { ClockDigit } from "./clock-digit";
 import "./clock.css";
 
 export default function App() {
-    const [time, setTime] = useState(getTime());
+    const [time, setTime] = useState<ReturnType<typeof getTime> | undefined>();
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -17,16 +17,16 @@ export default function App() {
         <main>
             <div className="clock-container">
                 <div className="time-box">
-                    <ClockDigit digit={time.h[0]} />
-                    <ClockDigit digit={time.h[1]} />
+                    <ClockDigit digit={time?.h[0]} />
+                    <ClockDigit digit={time?.h[1]} />
                 </div>
                 <div className="time-box">
-                    <ClockDigit digit={time.m[0]} />
-                    <ClockDigit digit={time.m[1]} />
+                    <ClockDigit digit={time?.m[0]} />
+                    <ClockDigit digit={time?.m[1]} />
                 </div>
                 <div className="time-box">
-                    <ClockDigit digit={time.s[0]} />
-                    <ClockDigit digit={time.s[1]} />
+                    <ClockDigit digit={time?.s[0]} />
+                    <ClockDigit digit={time?.s[1]} />
                 </div>
             </div>
         </main>
