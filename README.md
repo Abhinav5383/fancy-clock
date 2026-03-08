@@ -1,3 +1,5 @@
 A cool clock made out for clocks
 
-Original: https://codepen.io/EntropyReversed/pen/QwybYEJ
+Live demo: https://fancy-clock.vercel.app
+
+Inspired by: https://codepen.io/EntropyReversed/pen/QwybYEJ
